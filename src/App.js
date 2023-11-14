@@ -3,20 +3,23 @@ import './App.css';
 import Header from './components/Header';
 import Balance from './components/Balance';
 import IncomeExpenseBox from './components/IncomeExpenseBox';
-import History from './components/History';
+import TransactionList from './components/TransactionList';
 import AddTransaction from './components/AddTransaction';
+import { GlobalProvider } from './context/GlobalState';
 function App() {
   return (
-    <div>
-  <Header />
+  <GlobalProvider>
+     <Header />
     <div className="container">
       <Balance />
       <IncomeExpenseBox />
-      <History />
+      <TransactionList />
       <AddTransaction />
     </div>
     
-    </div>
+  </GlobalProvider>
+ 
+ 
   );
 }
 
